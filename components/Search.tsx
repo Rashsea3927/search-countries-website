@@ -3,7 +3,7 @@ import Filter from '@/components/Filter';
 
 const Search = () => {
   return (
-    <section className='mx-4 mt-6 sm:mx-8 md:flex md:justify-between'>
+    <section className='mx-4 mt-6 mb-8 sm:mx-8 md:flex md:justify-between md:mt-12 2xl:max-w-2xl 2xl:mx-auto'>
       <div className='mb-10 px-8 flex items-center gap-6 rounded bg-neutral-0 dark:bg-blue-700 shadow-md md:w-[480px]'>
         <SearchIcon />
         <input

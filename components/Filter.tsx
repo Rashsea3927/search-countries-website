@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Select,
   SelectContent,
@@ -7,8 +9,12 @@ import {
 } from '@components/ui/select';
 
 const Filter = () => {
+  const handleChangeRegion = (value: string) => {
+    // handle region change
+    console.log(value);
+  };
   return (
-    <Select>
+    <Select onValueChange={handleChangeRegion}>
       <SelectTrigger className='w-[200px] border-none rounded bg-neutral-0 dark:bg-blue-700 shadow-md text-neutral-900 dark:text-neutral-0'>
         <SelectValue placeholder='Filter by Region' />
       </SelectTrigger>

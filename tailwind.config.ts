@@ -84,11 +84,14 @@ export default {
         '2xl': '1.5rem',
       },
       boxShadow: {
+        xs: '0 0 7px 2px rgba(0, 0, 0, 0.03)',
         sm: '0 2px 4px 0 rgba(0, 0, 0, 0.05)',
         md: '0 2px 9px 0 rgba(0, 0, 0, 0.05)',
       },
       maxWidth: {
-        lg: '56rem',
+        xs: '16.5rem',
+        sm: '36rem',
+        lg: '54.5rem',
         '2xl': '80rem',
       },
       borderRadius: {
