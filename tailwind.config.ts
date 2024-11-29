@@ -92,12 +92,16 @@ export default {
         xs: '16.5rem',
         sm: '36rem',
         lg: '54.5rem',
+        xl: '71.25rem',
         '2xl': '80rem',
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      gap: {
+        18: '4.5rem',
       },
     },
   },

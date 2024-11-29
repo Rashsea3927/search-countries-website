@@ -23,7 +23,9 @@ export default function RootLayout({
     <html lang='en' className='dark'>
       <body className={`${nunitoSans.variable} font-nunito antialiased`}>
         <Header />
-        <main className='pt-20 min-h-screen bg-neutral-100 dark:bg-blue-800'>{children}</main>
+        <main className='pt-6 md:pt-12 min-h-screen bg-neutral-100 dark:bg-blue-800'>
+          {children}
+        </main>
       </body>
     </html>
   );

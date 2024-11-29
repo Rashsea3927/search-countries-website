@@ -14,3 +14,17 @@ export const handleGetAllCountries = async () => {
   const sortData = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
   return sortData;
 };
+
+export const handleFilterCountries = (countries: any[], region?: string, searchTerm?: string) => {
+  let filteredData = countries;
+  if (region) {
+    filteredData = filteredData.filter((country) => country.region === region);
+  }
+  if (searchTerm) {
+    filteredData = filteredData.filter((country) =>
+      country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
+
+  return filteredData.sort((a, b) => a.name.common.localeCompare(b.name.common));
+};
