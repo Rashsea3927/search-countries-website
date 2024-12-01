@@ -28,3 +28,12 @@ export const handleFilterCountries = (countries: any[], region?: string, searchT
 
   return filteredData.sort((a, b) => a.name.common.localeCompare(b.name.common));
 };
+
+export const handleGetCountryByCode = async (code: string) => {
+  const res = await fetch(
+    `https://restcountries.com/v3.1/alpha/${code}?fields=name,flags,population,capital,region,subregion,currencies,tld,languages,borders`,
+    { cache: 'force-cache' }
+  );
+  const data = await res.json();
+  return data;
+};
