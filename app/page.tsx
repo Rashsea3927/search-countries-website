@@ -5,8 +5,8 @@ import Search from '@/components/Search';
 const Home = () => {
   return (
     <>
-      <Search />
       <Suspense fallback={<div>Loading...</div>}>
+        <Search />
         <CountriesList />
       </Suspense>
     </>
