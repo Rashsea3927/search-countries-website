@@ -22,7 +22,7 @@ const CountryDetailPage = async ({ params }: { params: Promise<{ code: string }>
   const borderCountriesName = country.borders
     ? country.borders.map((border: string) => {
         const name = convertISO3toISO2(border);
-        return regionNamesInEnglish.of(name);
+        return name ? regionNamesInEnglish.of(name) : border;
       })
     : [];
 
