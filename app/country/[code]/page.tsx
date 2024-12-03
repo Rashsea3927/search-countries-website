@@ -27,7 +27,9 @@ const CountryDetailPage = async ({ params }: { params: Promise<{ code: string }>
     : [];
 
   const nativeNameKey = country.name.nativeName ? Object.keys(country.name.nativeName)[0] : '';
-  const nativeName = country.name.nativeName ? country.name.nativeName[nativeNameKey].official : '';
+  const nativeName = country.name.nativeName
+    ? country.name.nativeName[nativeNameKey]?.official
+    : '';
 
   const languageNames = Object.values(country.languages).map((value) => value);
   const languageDisplay = languageNames.length > 1 ? languageNames.join(', ') : languageNames[0];
