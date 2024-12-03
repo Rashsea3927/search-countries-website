@@ -3,7 +3,7 @@ import { convertISO3toISO2 } from '@/lib/convertISO3toISO2';
 import Image from 'next/image';
 import BackButton from '@/components/BackButton';
 import Link from 'next/link';
-import { Country, CountryDetail } from '@/types/country';
+import { Country, CountryDetail } from '@/types/index';
 
 const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
