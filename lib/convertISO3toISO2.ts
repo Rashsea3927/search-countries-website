@@ -1,4 +1,4 @@
-const countryISOMapping = {
+const countryISOMapping: { [key: string]: string } = {
   AFG: 'AF',
   ALA: 'AX',
   ALB: 'AL',
@@ -244,6 +244,6 @@ const countryISOMapping = {
   ZWE: 'ZW',
 };
 
-export const convertISO3toISO2 = (iso3: string): string | undefined => {
+export const convertISO3toISO2 = (iso3: string) => {
   return countryISOMapping[iso3];
 };
