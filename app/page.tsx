@@ -1,7 +1,7 @@
 import CountriesList from '@/components/CountriesList';
 import Search from '@/components/Search';
 
-export const Home = async () => {
+export const Home = () => {
   return (
     <>
       <Search />
