@@ -20,7 +20,7 @@ const CountryDetailPage = async ({ params }: { params: Promise<{ code: string }>
   const country: CountryDetail = await handleGetCountryByCode(code);
 
   const borderCountriesName = country.borders.map((border: string) => {
-    const name = convertISO3toISO2(border);
+    const name: string | undefined = convertISO3toISO2(border);
     return regionNamesInEnglish.of(name);
   });
 
