@@ -3,11 +3,12 @@ import { convertISO3toISO2 } from '@/lib/convertISO3toISO2';
 import Image from 'next/image';
 import BackButton from '@/components/BackButton';
 import Link from 'next/link';
+import { Country, CountryDetail } from '@/types/country';
 
 const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
 export async function generateStaticParams() {
-  const countries = await handleGetAllCountries();
+  const countries: Country[] = await handleGetAllCountries();
 
   return countries.map((country) => ({
     code: country.cca3,
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 
 const CountryDetailPage = async ({ params }: { params: Promise<{ code: string }> }) => {
   const { code } = await params;
-  const country = await handleGetCountryByCode(code);
+  const country: CountryDetail = await handleGetCountryByCode(code);
 
   const borderCountriesName = country.borders.map((border: string) => {
     const name = convertISO3toISO2(border);

@@ -19,3 +19,18 @@ export type Country = {
   region: string;
   population: number;
 };
+
+export type CountryDetail = Country & {
+  tld: string[];
+  currencies: {
+    [key: string]: {
+      name: string;
+      symbol: string;
+    };
+  };
+  subregion: string;
+  languages: {
+    [key: string]: string;
+  };
+  borders: string[];
+};
