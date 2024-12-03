@@ -134,7 +134,7 @@ const CountryDetailPage = async ({ params }: { params: Promise<{ code: string }>
                         href={`/country/${border}`}
                         className='bg-neutral-0 dark:bg-blue-700 text-blue-900 dark:text-neutral-0 shadow-border rounded py-[6px] px-8'
                       >
-                        {regionNamesInEnglish.of(name)}
+                        {name ? regionNamesInEnglish.of(name) : border}
                       </Link>
                     );
                   })}
