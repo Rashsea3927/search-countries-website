@@ -10,7 +10,7 @@ const CountriesList = () => {
   const searchParams = useSearchParams();
   const region = searchParams.get('region') || undefined;
   const searchTerm = searchParams.get('name') || undefined;
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState<Country[]>([]);
 
   useEffect(() => {
     const fetchCountries = async () => {
