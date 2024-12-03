@@ -8,8 +8,8 @@ import { Country } from '@/types/index';
 
 const CountriesList = () => {
   const searchParams = useSearchParams();
-  const region = searchParams.get('region');
-  const searchTerm = searchParams.get('name');
+  const region = searchParams.get('region') || undefined;
+  const searchTerm = searchParams.get('name') || undefined;
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
