@@ -4,6 +4,7 @@ import { handleGetAllCountries, handleFilterCountries } from '@/lib/utils';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { Country } from '@/types/index';
 
 const CountriesList = () => {
   const searchParams = useSearchParams();
@@ -14,7 +15,7 @@ const CountriesList = () => {
   useEffect(() => {
     const fetchCountries = async () => {
       const data = await handleGetAllCountries();
-      const filteredData = handleFilterCountries(data, region, searchTerm);
+      const filteredData: Country[] = handleFilterCountries(data, region, searchTerm);
       setCountries(filteredData);
     };
     fetchCountries();
