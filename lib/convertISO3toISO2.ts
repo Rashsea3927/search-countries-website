@@ -244,6 +244,6 @@ const countryISOMapping = {
   ZWE: 'ZW',
 };
 
-export const convertISO3toISO2 = (iso3: string): string => {
+export const convertISO3toISO2 = (iso3: string): string | undefined => {
   return countryISOMapping[iso3];
 };
