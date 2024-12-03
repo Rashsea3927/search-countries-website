@@ -43,6 +43,7 @@ export default {
         lg: '1.25rem',
         xl: '1.375rem',
         '2xl': '1.5rem',
+        '3xl': '2rem',
       },
       boxShadow: {
         dark: '0 0 7px 0 rgba(0, 0, 0, 0.03)',

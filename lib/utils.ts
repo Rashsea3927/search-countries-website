@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import type { Country } from '@/types/index';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -10,12 +11,16 @@ export const handleGetAllCountries = async () => {
     'https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3',
     { cache: 'force-cache' }
   );
-  const data = await res.json();
+  const data: Country[] = await res.json();
   const sortData = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
   return sortData;
 };
 
-export const handleFilterCountries = (countries: any[], region?: string, searchTerm?: string) => {
+export const handleFilterCountries = (
+  countries: Country[],
+  region?: string,
+  searchTerm?: string
+) => {
   let filteredData = countries;
   if (region) {
     filteredData = filteredData.filter((country) => country.region === region);
